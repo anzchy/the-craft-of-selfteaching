@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/jupyter_ai/chat_handlers/base.py", line 45, in on_message
+    await self.process_message(message)
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/jupyter_ai/chat_handlers/generate.py", line 257, in process_message
+    self.get_llm_chain()
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/jupyter_ai/chat_handlers/base.py", line 119, in get_llm_chain
+    self.create_llm_chain(lm_provider, lm_provider_params)
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/jupyter_ai/chat_handlers/generate.py", line 230, in create_llm_chain
+    llm = provider(**provider_params, **model_parameters)
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/jupyter_ai_magics/providers.py", line 195, in __init__
+    super().__init__(*args, **kwargs, **model_kwargs)
+  File "/Users/chengyong/anaconda3/envs/Jupyterlab_conda/lib/python3.8/site-packages/langchain/load/serializable.py", line 97, in __init__
+    super().__init__(**kwargs)
+  File "pydantic/main.py", line 341, in pydantic.main.BaseModel.__init__
+pydantic.error_wrappers.ValidationError: 1 validation error for ChatOpenAINewProvider
+__root__
+  Could not import openai python package. Please install it with `pip install openai`. (type=value_error)
